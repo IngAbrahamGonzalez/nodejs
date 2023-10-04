@@ -7,3 +7,8 @@ process.on('beforeExit', () => {
 process.on('exit', () => {
     console.log('Ale, el proceso se acabó');
 })
+
+process.on('uncaughException', (err, origen)=> {
+    console.log('Vaya la habeis cagado');
+    console.error(err);
+});
